@@ -141,6 +141,8 @@
         max-width: 1200px;
         margin: 0 auto;
         width: 100%;
+        justify-content: flex-start;
+        gap: 4rem;
       }
 
       /* Logo Styling - 15% bigger */
@@ -148,7 +150,6 @@
         display: flex;
         align-items: center;
         flex-shrink: 0;
-        margin-right: 2rem;
       }
 
       .logo-image {
@@ -158,13 +159,14 @@
         object-fit: contain;
       }
 
-      /* NAVIGATION MENU - EVENLY SPACED CLOSER TO LOGO */
+      /* NAVIGATION MENU - PROPERLY SPACED */
       .nav-links {
         display: flex;
         list-style: none;
         gap: 2.5rem;
         align-items: center;
         flex: 1;
+        white-space: nowrap;
       }
 
       .nav-links a {
@@ -182,7 +184,7 @@
         transform: translateY(-2px);
       }
 
-      /* Mobile Menu */
+      /* Mobile Menu - Positioned to far right */
       .mobile-menu {
         display: none;
         flex-direction: column;
@@ -190,6 +192,7 @@
         padding: 0.5rem;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 8px;
+        margin-left: auto;
       }
 
       .mobile-menu span {
@@ -528,7 +531,10 @@
       @media (max-width: 768px) {
         .nav-container {
           justify-content: space-between;
-          gap: 1rem;
+        }
+
+        .logo {
+          margin-right: 0;
         }
 
         .nav-links {
@@ -541,8 +547,6 @@
           background: rgba(30, 58, 138, 0.95);
           padding: 1rem;
           gap: 0.5rem;
-          margin-left: 0;
-          justify-content: flex-start;
         }
 
         .nav-links.active {
@@ -557,6 +561,7 @@
 
         .mobile-menu {
           display: flex;
+          margin-left: auto;
         }
 
         .hero h1 {
