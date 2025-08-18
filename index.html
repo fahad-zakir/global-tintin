@@ -110,7 +110,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(5, 150, 105, 0.8) 100%);
+        background: linear-gradient(
+          135deg,
+          rgba(30, 58, 138, 0.8) 0%,
+          rgba(5, 150, 105, 0.8) 100%
+        );
         z-index: -1;
       }
 
@@ -206,18 +210,19 @@
 
       /* Hero Section */
       .hero {
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         text-align: center;
         position: relative;
-        padding-top: 80px;
+        padding-top: 120px;
+        padding-bottom: 0px;
       }
 
       .hero-content {
         max-width: 800px;
-        padding: 2rem;
+        padding: 2rem 2rem 0.5rem 2rem;
       }
 
       /* FIXED TITLE - MATCHING LOGO COLORS */
@@ -260,7 +265,11 @@
       .cta-button {
         display: inline-block;
         padding: 1rem 2rem;
-        background: linear-gradient(135deg, var(--logo-light-blue), var(--logo-light-green));
+        background: linear-gradient(
+          135deg,
+          var(--logo-light-blue),
+          var(--logo-light-green)
+        );
         color: white;
         text-decoration: none;
         border-radius: 50px;
@@ -288,7 +297,7 @@
 
       /* Sections */
       .section {
-        padding: 5rem 2rem;
+        padding: 2.5rem 2rem 5rem 2rem;
         max-width: 1200px;
         margin: 0 auto;
       }
@@ -658,16 +667,29 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="hero-content">
-        <h1><span class="g-letter">G</span><span class="blue-text">lobal LG </span><span class="green-text">Tinting</span></h1>
+        <h1>
+          <span class="g-letter">G</span><span class="blue-text">lobal LG </span
+          ><span class="green-text">Tinting</span>
+        </h1>
         <p>Professional Window Tinting Services with 20+ Years of Excellence</p>
         <p>Automotive • Residential • Commercial • Franchise Solutions</p>
-        
-        <!-- Hero Image Placeholder -->
-        <div class="image-placeholder hero-image">
-          <div>Add Professional Tinting Image Here</div>
-          <small>(Recommended: 300x200px)</small>
-        </div>
-        
+
+        <!-- Hero Image -->
+        <img
+          src="./tint-1.jpg"
+          alt="Professional Window Tinting"
+          class="hero-image"
+          style="
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            width: 600px;
+            height: 400px;
+            display: block;
+            margin: 2rem auto 1.5rem auto;
+          "
+        />
+
         <a href="#contact" class="cta-button">Get Free Quote</a>
       </div>
     </section>
@@ -677,11 +699,13 @@
       <h2>Our Premium Services</h2>
       <div class="services-grid">
         <div class="service-card glass">
-          <!-- Service Image Placeholder -->
-          <div class="image-placeholder service-image">
-            <div>Automotive Tinting Image</div>
-            <small>(Car tinting photo)</small>
-          </div>
+          <!-- Automotive Tinting Image -->
+          <img
+            src="./auto-tint.png"
+            alt="Automotive Window Tinting"
+            class="service-image"
+            style="border-radius: 15px; object-fit: cover"
+          />
           <div class="service-icon">🚗</div>
           <h3>Automotive Tinting</h3>
           <p>
@@ -691,11 +715,13 @@
           </p>
         </div>
         <div class="service-card glass">
-          <!-- Service Image Placeholder -->
-          <div class="image-placeholder service-image">
-            <div>Residential Tinting Image</div>
-            <small>(Home window film photo)</small>
-          </div>
+          <!-- Residential Tinting Image -->
+          <img
+            src="./residential-tint.png"
+            alt="Residential Window Film"
+            class="service-image"
+            style="border-radius: 15px; object-fit: cover"
+          />
           <div class="service-icon">🏠</div>
           <h3>Residential Film</h3>
           <p>
@@ -705,31 +731,19 @@
           </p>
         </div>
         <div class="service-card glass">
-          <!-- Service Image Placeholder -->
-          <div class="image-placeholder service-image">
-            <div>Commercial Tinting Image</div>
-            <small>(Office building photo)</small>
-          </div>
+          <!-- Commercial Tinting Image -->
+          <img
+            src="./commercial-tint.png"
+            alt="Commercial Window Tinting"
+            class="service-image"
+            style="border-radius: 15px; object-fit: cover"
+          />
           <div class="service-icon">🏢</div>
           <h3>Commercial Solutions</h3>
           <p>
             Professional window tinting for office buildings, retail spaces, and
             corporate facilities. Improve employee comfort, reduce glare, and
             create a professional appearance.
-          </p>
-        </div>
-        <div class="service-card glass">
-          <!-- Service Image Placeholder -->
-          <div class="image-placeholder service-image">
-            <div>Franchise Services Image</div>
-            <small>(Multiple locations photo)</small>
-          </div>
-          <div class="service-icon">🔗</div>
-          <h3>Franchise Services</h3>
-          <p>
-            Specialized tinting solutions for franchise businesses. Consistent
-            quality across multiple locations with bulk pricing and standardized
-            installation procedures.
           </p>
         </div>
       </div>
@@ -781,30 +795,36 @@
     <!-- Gallery Section -->
     <section id="gallery" class="section fade-in">
       <h2>Before & After Gallery</h2>
-      <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem;">
+      <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem">
         See the dramatic difference our professional tinting makes
       </p>
       <div class="gallery-grid">
         <div class="gallery-item glass">
           <h3>Automotive Transformation</h3>
-          <div class="image-placeholder before-after-image">
-            <div>Before/After Car Tinting</div>
-            <small>(Before & after comparison - 400x300px)</small>
-          </div>
+          <img
+            src="./auto-2.png"
+            alt="Before/After Car Tinting"
+            class="before-after-image"
+            style="border-radius: 15px; object-fit: cover"
+          />
         </div>
         <div class="gallery-item glass">
           <h3>Residential Installation</h3>
-          <div class="image-placeholder before-after-image">
-            <div>Home Window Tinting</div>
-            <small>(Residential project photo - 400x300px)</small>
-          </div>
+          <img
+            src="./residential-2.png"
+            alt="Home Window Tinting"
+            class="before-after-image"
+            style="border-radius: 15px; object-fit: cover"
+          />
         </div>
         <div class="gallery-item glass">
           <h3>Commercial Project</h3>
-          <div class="image-placeholder before-after-image">
-            <div>Office Building Tinting</div>
-            <small>(Commercial installation - 400x300px)</small>
-          </div>
+          <img
+            src="./commercial-2.png"
+            alt="Office Building Tinting"
+            class="before-after-image"
+            style="border-radius: 15px; object-fit: cover"
+          />
         </div>
       </div>
     </section>
@@ -955,34 +975,36 @@
       });
 
       // Simple mobile menu toggle
-      document.querySelector('.mobile-menu').addEventListener('click', function() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
-        
-        // Simple hamburger animation
-        const spans = this.querySelectorAll('span');
-        if (navLinks.classList.contains('active')) {
-          spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-          spans[1].style.opacity = '0';
-          spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-        } else {
-          spans[0].style.transform = 'none';
-          spans[1].style.opacity = '1';
-          spans[2].style.transform = 'none';
-        }
-      });
+      document
+        .querySelector(".mobile-menu")
+        .addEventListener("click", function () {
+          const navLinks = document.querySelector(".nav-links");
+          navLinks.classList.toggle("active");
+
+          // Simple hamburger animation
+          const spans = this.querySelectorAll("span");
+          if (navLinks.classList.contains("active")) {
+            spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+            spans[1].style.opacity = "0";
+            spans[2].style.transform = "rotate(-45deg) translate(7px, -6px)";
+          } else {
+            spans[0].style.transform = "none";
+            spans[1].style.opacity = "1";
+            spans[2].style.transform = "none";
+          }
+        });
 
       // Close mobile menu when clicking on a link
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          const navLinks = document.querySelector('.nav-links');
-          const mobileMenu = document.querySelector('.mobile-menu');
-          const spans = mobileMenu.querySelectorAll('span');
-          
-          navLinks.classList.remove('active');
-          spans[0].style.transform = 'none';
-          spans[1].style.opacity = '1';
-          spans[2].style.transform = 'none';
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          const navLinks = document.querySelector(".nav-links");
+          const mobileMenu = document.querySelector(".mobile-menu");
+          const spans = mobileMenu.querySelectorAll("span");
+
+          navLinks.classList.remove("active");
+          spans[0].style.transform = "none";
+          spans[1].style.opacity = "1";
+          spans[2].style.transform = "none";
         });
       });
 
