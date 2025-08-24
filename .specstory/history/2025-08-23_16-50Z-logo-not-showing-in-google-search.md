@@ -518,3 +518,91 @@ The `.htaccess` file is the key fix here - it ensures all your URL variations pr
 
 ---
 
+_**User**_
+
+help me commit and save, commands in iterm2
+
+---
+
+_**Assistant**_
+
+I'll help you commit and push your changes using Git commands in iTerm2. Let me provide you with the exact commands you need to run:
+
+---
+
+```bash
+cd /Users/fahadzakir/Desktop/global_tinting && git status
+```
+
+```
+
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .specstory/history/2025-08-23_16-50Z-logo-not-showing-in-goo
+gle-search.md
+        modified:   index.html
+        modified:   robots.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .htaccess
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+---
+
+Perfect! I can see your changes. Now let's commit and push them step by step:
+
+---
+
+```bash
+git add .
+```
+
+---
+
+_**User**_
+
+illd fo it myself, just me the commands for saving and pushing
+
+---
+
+_**Assistant**_
+
+Here are the exact Git commands you need to run in iTerm2:
+
+## 📝 **Git Commands to Save & Push:**
+
+```bash
+# 1. Add all changes to staging
+git add .
+
+# 2. Commit with a descriptive message
+git commit -m "Fix Google Search Console indexing issues - add Open Graph tags, htaccess redirects, update robots.txt"
+
+# 3. Push to remote repository
+git push origin master
+```
+
+## 🔄 **Alternative (if you want to be more specific):**
+
+```bash
+# Add files individually (optional)
+git add index.html
+git add robots.txt
+git add .htaccess
+
+# Then commit and push
+git commit -m "Fix SEO and indexing issues"
+git push origin master
+```
+
+That's it! These three commands will save all your changes and push them to your repository.
+
+---
+
