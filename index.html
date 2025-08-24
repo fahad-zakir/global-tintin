@@ -1472,6 +1472,21 @@
     </footer>
 
     <script>
+      // Redirect non-canonical URLs to canonical domain
+      (function () {
+        var canonical = "https://orlando-tinting.com/";
+        var current = window.location.href;
+
+        // Check if we're on a non-canonical URL
+        if (
+          current !== canonical &&
+          (current.includes("www.orlando-tinting.com") ||
+            current.startsWith("http://orlando-tinting.com"))
+        ) {
+          window.location.replace(canonical);
+        }
+      })();
+
       // Simple navbar scroll effect
       window.addEventListener("scroll", () => {
         const navbar = document.getElementById("navbar");
