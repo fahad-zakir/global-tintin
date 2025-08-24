@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /.htaccess
+Disallow: /README.md
 
+# Sitemap location
 Sitemap: https://orlando-tinting.com/sitemap.xml
+
+# Additional crawling directives
+Crawl-delay: 1
